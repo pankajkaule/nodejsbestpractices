@@ -16,10 +16,12 @@ app.use(bodyParser.json());
 
 const authRoutes = require('./routes/auth');
 const productRoutes = require('./routes/product'); 
+const cartRoutes = require('./routes/cart');
+const orderRoutes = require('./routes/order'); 
 
 app.use('/auth', authRoutes);
 app.use('/products', productRoutes); 
-
+app.use('/cart', cartRoutes); 
 
 const port = 3000;
 app.listen(port, () => {
